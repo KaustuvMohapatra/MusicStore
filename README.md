@@ -1,0 +1,11 @@
+Output:
+HomePage
+![image](https://github.com/user-attachments/assets/83ff9308-3118-4045-a10f-a083a113514b)
+Instruments:
+![image](https://github.com/user-attachments/assets/da72be0c-2789-4b8b-8f6e-092070b1362d)
+Albums:
+![image](https://github.com/user-attachments/assets/42351a3a-5c7f-4dda-b48e-afe2682b229b)
+Contact:
+![image](https://github.com/user-attachments/assets/17481339-db26-4564-9b80-2298b9e7f689)
+Cart:
+![image](https://github.com/user-attachments/assets/8c7de016-564c-4797-bdba-57fb2f74b379)
