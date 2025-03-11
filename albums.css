@@ -1,0 +1,369 @@
+/* albums.css - Specific styles for the albums page */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Banner */
+.page-banner {
+  background: linear-gradient(to right, rgba(58, 28, 113, 0.9), rgba(215, 109, 119, 0.9)), url('../images/albums-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--light-text);
+  padding: 80px 5%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Album Categories */
+.album-categories {
+  padding: 20px 5% 40px;
+  text-align: center;
+}
+
+.album-categories h2 {
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.album-categories h2::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.genre-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.genre-filter {
+  padding: 10px 20px;
+  background-color: var(--light-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.genre-filter:hover, .genre-filter.active {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border-color: var(--primary-color);
+}
+
+.genre-filter:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Albums Grid */
+.albums-grid {
+  padding: 20px 5% 60px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.album-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.album-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+}
+
+.album-image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.album-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.album-card:hover .album-image img {
+  transform: scale(1.05);
+}
+
+.album-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.album-card:hover .album-overlay {
+  opacity: 1;
+}
+
+.quick-view {
+  background-color: white;
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.quick-view:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.album-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.album-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.album-artist {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.album-price {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.album-rating {
+  color: #ffc107;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.album-rating span {
+  color: #666;
+  margin-left: 5px;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-to-cart:hover {
+  background-color: var(--secondary-color);
+}
+
+.add-to-cart:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hide/Show Albums Based on Filter */
+.album-card.hidden {
+  display: none;
+}
+
+/* Vinyl Badge */
+.album-card.vinyl::before {
+  content: 'Vinyl';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+/* Limited Edition Badge */
+.album-card.limited-edition::before {
+  content: 'Limited Edition';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+/* Sale Badge */
+.album-card.sale::before {
+  content: 'Sale';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .page-banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .genre-filters {
+    flex-wrap: wrap;
+  }
+  
+  .genre-filter {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 60px 5%;
+  }
+  
+  .page-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .album-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .genre-filter {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  
+  .album-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .album-info h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .album-categories,
+  .newsletter,
+  .footer {
+    display: none;
+  }
+  
+  .album-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+}

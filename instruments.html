@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruments | Harmony Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="instruments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Harmony Haven Logo" class="logo">
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="instruments.html" class="active"><i class="fas fa-guitar"></i> Instruments</a></li>
+                <li><a href="albums.html"><i class="fas fa-compact-disc"></i> Albums</a></li>
+                <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <div class="search-container">
+                <input type="text" placeholder="Search instruments..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart">
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1>Musical Instruments</h1>
+                <p>Find the perfect instrument to express your musical talent</p>
+            </div>
+        </section>
+
+        <section class="instrument-filters">
+            <div class="container">
+                <h2>Browse By Category</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Instruments</button>
+                    <button class="filter-btn" data-filter="guitar">Guitars</button>
+                    <button class="filter-btn" data-filter="piano">Pianos & Keyboards</button>
+                    <button class="filter-btn" data-filter="drums">Drums & Percussion</button>
+                    <button class="filter-btn" data-filter="wind">Wind Instruments</button>
+                    <button class="filter-btn" data-filter="string">String Instruments</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="instruments-grid">
+            <div class="container">
+                <div class="instrument-list">
+                    <!-- Guitars -->
+                    <div class="instrument-card" data-category="guitar">
+                        <div class="instrument-image">
+                            <img src="images/guitar1.jpg" alt="Electric Guitar">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Fender Stratocaster</h3>
+                            <p class="instrument-description">Professional electric guitar with three single-coil
+                                pickups</p>
+                            <p class="instrument-price">$899.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(42)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="guitar1" data-name="Fender Stratocaster"
+                                data-price="899.99"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-card" data-category="guitar">
+                        <div class="instrument-image">
+                            <img src="images/guitar2.jpg" alt="Acoustic Guitar">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Taylor 214ce</h3>
+                            <p class="instrument-description">Grand Auditorium acoustic-electric guitar with Sitka
+                                spruce top</p>
+                            <p class="instrument-price">$1,099.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(38)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="guitar2" data-name="Taylor 214ce"
+                                data-price="1099.99"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Pianos & Keyboards -->
+                    <div class="instrument-card" data-category="piano">
+                        <div class="instrument-image">
+                            <img src="images/piano1.jpg" alt="Digital Piano">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Yamaha P-125</h3>
+                            <p class="instrument-description">88-key weighted digital piano with GHS action</p>
+                            <p class="instrument-price">$649.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(27)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="piano1" data-name="Yamaha P-125" data-price="649.99"><i
+                                    class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="instrument-card" data-category="piano">
+                        <div class="instrument-image">
+                            <img src="images/piano2.jpg" alt="Grand Piano">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Steinway Model M</h3>
+                            <p class="instrument-description">5'7" medium grand piano with rich, warm tone</p>
+                            <p class="instrument-price">$69,999.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(14)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="piano2" data-name="Steinway Model M"
+                                data-price="69999.99"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Drums & Percussion -->
+                    <div class="instrument-card" data-category="drums">
+                        <div class="instrument-image">
+                            <img src="images/drums1.jpg" alt="Drum Kit">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Pearl Export Series</h3>
+                            <p class="instrument-description">5-piece drum set with hardware and cymbals</p>
+                            <p class="instrument-price">$799.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>(31)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="drums1" data-name="Pearl Export Series"
+                                data-price="799.99"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Wind Instruments -->
+                    <div class="instrument-card" data-category="wind">
+                        <div class="instrument-image">
+                            <img src="images/saxophone.jpg" alt="Saxophone">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Yamaha YAS-280</h3>
+                            <p class="instrument-description">Alto saxophone with gold lacquer finish</p>
+                            <p class="instrument-price">$1,299.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(23)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="wind1" data-name="Yamaha YAS-280"
+                                data-price="1299.99"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- String Instruments -->
+                    <div class="instrument-card" data-category="string">
+                        <div class="instrument-image">
+                            <img src="images/violin.jpg" alt="Violin">
+                            <div class="instrument-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i> Quick View</button>
+                            </div>
+                        </div>
+                        <div class="instrument-info">
+                            <h3>Stentor Student II</h3>
+                            <p class="instrument-description">4/4 size violin with case and bow</p>
+                            <p class="instrument-price">$299.99</p>
+                            <div class="instrument-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(19)</span>
+                            </div>
+                            <button class="add-to-cart" data-id="string1" data-name="Stentor Student II"
+                                data-price="299.99"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instrument-features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h3>Free Shipping</h3>
+                        <p>On all orders over $100</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>2-Year Warranty</h3>
+                        <p>On all instruments</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Easy Returns</h3>
+                        <p>30-day money back guarantee</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <h3>Expert Support</h3>
+                        <p>From professional musicians</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path fill="#f8f9fa" fill-opacity="1"
+                        d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <div class="newsletter-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h2>Stay in Tune with Us</h2>
+                    <p>Subscribe to our newsletter for exclusive deals, new arrivals, and music tips</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn primary-btn">
+                                <span>Subscribe</span>
+                                <i class="fas fa-music"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="newsletter-wave bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path fill="#f8f9fa" fill-opacity="1"
+                        d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+                    </path>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#3a1c71" fill-opacity="1"
+                    d="M0,32L60,37.3C120,43,240,53,360,64C480,75,600,85,720,80C840,75,960,53,1080,48C1200,43,1320,53,1380,58.7L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z">
+                </path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Harmony Haven Logo">
+                    </div>
+                    <p>Your destination for quality musical instruments and albums since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="lessons.html">Music Lessons</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="returns.html">Returns & Refunds</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Visit Our Store</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Music Avenue<br>Harmony City, HC 12345</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@harmonyhaven.com</p>
+                    </address>
+                    <div class="store-hours">
+                        <h4>Store Hours</h4>
+                        <p>Mon-Fri: 9am - 8pm</p>
+                        <p>Sat: 10am - 6pm</p>
+                        <p>Sun: 12pm - 5pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Harmony Haven. All Rights Reserved.</p>
+            <div class="payment-methods"> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i
+                    class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i> <i class="fab fa-cc-apple-pay"></i> <i
+                    class="fab fa-cc-discover"></i> </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

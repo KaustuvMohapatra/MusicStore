@@ -1,0 +1,486 @@
+/* events.css - Specific styles for the events page */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Banner */
+.page-banner {
+  background: linear-gradient(to right, rgba(58, 28, 113, 0.9), rgba(215, 109, 119, 0.9)), url('../images/events-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--light-text);
+  padding: 80px 5%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Event Filters */
+.event-filters {
+  padding: 20px 5% 40px;
+  text-align: center;
+}
+
+.event-filters h2 {
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.event-filters h2::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: var(--light-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border-color: var(--primary-color);
+}
+
+.filter-btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Events Grid */
+.events-grid {
+  padding: 20px 5% 60px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+}
+
+.event-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+.event-date {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  width: 60px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-date .day {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-date .month {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.event-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.event-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.event-meta i {
+  color: var(--secondary-color);
+  margin-right: 5px;
+}
+
+.event-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.event-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.event-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.event-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.featured-event {
+  grid-column: span 2;
+}
+
+.featured-event .event-image {
+  height: 300px;
+}
+
+.featured-event::after {
+  content: 'Featured Event';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+/* Calendar Styles */
+.event-calendar {
+  padding: 40px 5% 80px;
+  background-color: var(--light-bg);
+}
+
+.event-calendar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.event-calendar h2::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.calendar-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-nav {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.calendar-nav:hover {
+  background-color: var(--light-bg);
+}
+
+.current-month {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day-header {
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  color: var(--primary-color);
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.calendar-day:hover {
+  background-color: var(--light-bg);
+}
+
+.calendar-day.inactive {
+  color: #ccc;
+}
+
+.calendar-day.has-event {
+  background-color: rgba(215, 109, 119, 0.1);
+  color: var(--secondary-color);
+  font-weight: 700;
+  position: relative;
+}
+
+.calendar-day.has-event::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.calendar-day.today {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hide/Show Events Based on Filter */
+.event-card.hidden {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .page-banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    margin-bottom: 10px;
+  }
+  
+  .featured-event {
+    grid-column: span 1;
+  }
+  
+  .featured-event .event-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 60px 5%;
+  }
+  
+  .page-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .event-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .event-image {
+    height: 180px;
+  }
+  
+  .calendar-day {
+    padding: 10px 5px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .event-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .event-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .calendar-grid {
+    gap: 5px;
+  }
+  
+  .calendar-day {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .event-filters,
+  .newsletter,
+  .footer {
+    display: none;
+  }
+  
+  .event-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+  
+  .event-calendar {
+    page-break-before: always;
+  }
+}
